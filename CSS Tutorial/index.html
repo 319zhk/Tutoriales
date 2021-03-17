@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tutorial CSS</title>
     <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="./normalize.css">
   </head>
 <body>
   <!--CSS son reglas de estilo para nuestros elementos de html. Existen 3 formas incluir CSS en nuestro HTML: 
@@ -28,7 +29,16 @@
  que nuestro html conecte con nuestro archivo css. Esto se hace creando dentro del contenido de <head> un 
    <link rel="stylesheet" href="estilos.css">
 
- Las primeras 2 formas no son recomendables
+ Las primeras 2 formas no son recomendables. Lo mas recomendable es la tercera opcion, es decir, tener un css separado.
+
+ **Cual es el problema con css? Cada navegador renderiza el css de manera diferente, por lo tanto hay que normalizarlo para que se vea igual en todos.
+ Para normalizar, existe una libreria que se llama normalize.  Este documento descargado es .css, guadalo en la misma carpeta donde esta tu estilos.css
+ Y agregalo de igual forma con la etiqueta link como hiciste con estilos previamente.
+
+ En CSS existen 3 formas de selectores:
+  Seleccionar por CLASE: (En html <tag class="nombredelaclase"></tag>  en css .nombredelaclase {} ). Ejemplo titulo 1
+  Seleccionar por ID: (En html <tag id="nombredelaID"></tag>  en css #nombredelaID {} ). Ejemplo Texto 1
+  Seleccionar por combinacion: (En css h2.titulos { color: orange,})
 --> 
   <main>
       <section>
@@ -37,6 +47,13 @@
               Quasi quam alias quidem odit vero est eligendi deserunt iusto! 
               Ipsum consequatur commodi corrupti. Neque voluptatum at eius,
               dolor dicta necessitatibus placeat!</p>
+
+          <h2>Titulo 1</h2> 
+          <h2 class="titulos">Titulo 2</h2> <!-- Cuando se especifican las caracteristicas para esta clase en css,todos los elementos que contengan esa clase tendran esas caracteristicas-->
+          <h2>Titulo 3</h2>
+
+          <p id="textazo">Texto 1</p>
+          <p>Texto 2</p>
       </section>
   </main> 
 </body>
