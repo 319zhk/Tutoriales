@@ -39,9 +39,27 @@ CSS sigue una jerarquia especifica. CSS Prioriza #ID  despues las .CLASES y por 
 Se puede editar la jeraquia asignandole al elemento que queremos que sea prioritario: !important;
   */ 
 
-  /* Colores en CSS. Se pueden representar de 4 formas:
-  1-Nombre de los colores
-  2-RGB (Red-Green-Blue)
-  3-HSL 
-  4-Hexadesimal
+  /* Colores en CSS. 
+  Los colores en CSS se pueden representar de 4 formas:
+  1-Nombre de los colores. No todos los colores se ven de la misma forma en diferentes pantallas asi que puede variar la tonalidad
+  2-RGB (Red-Green-Blue). Se representa el color exacto en la tonalidad seleccionada. Ejemplo  rgb(252, 56, 167). Existe tambien rgba(252, 56, 167, 0.5) El ultimo numero es llamado alfa y va de 0 a 1. Indica la transparencia
+  3-HSL  Se representa el color exacto en la tonalidad seleccionada. Ejemplo hsl(326°, 97%, 60%)
+  4-Hexadesimal Se representa el color exacto en la tonalidad seleccionada. Ejemplo #fc38a7
+
+  (en google si ponemos color picker apareceran otras mas opciones como CMYK(para impresiones) y HSV(para pantallas mas calibradas)
   */
+  .caja {
+      margin: 20px;
+      height: 200px;
+      width: 200px;
+    background-color: rgb(255, 231, 74); 
+
+    /* BORDERS */
+    border: 10px dotted red;  /* Esto es un shortcut para tantear el espacio q esta tomando el contenido dentro de nuestra pagina. El border puede ser solid, dotted o dashed    */
+    border-right: dashed green;
+     /* Existe tambien otro atributo de borders que es el grosor (width) y se indica en orden de las agujas del reloj  */
+    border-width: 10px 40px 5px 3px ;  /* Se pueden indicar solo 3 parametros y esto indica valores de arriba, derecha+izq y abajo. Si das 2 parametros indica valores de arriba+abajo y derecha+izq. Y si se da 1 solo parametro es global.    */
+    /* El border radius le da una redondez a la imagen  */
+    }
+    
+}
