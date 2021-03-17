@@ -27,3 +27,21 @@ h2.titulos {
 #textazo {
     font-size: 88px;
 }
+
+/* En CSS existen tambien pseudo-clases, que afectan a elementos especificos  por ejemplo: first-child, last child, etc 
+  */
+
+section :last-child{
+    color: fuchsia;
+}
+/* Si se asignan diferentes especificaciones simultaneamente a un mismo elemento CSS (por ejemplo color a un titulo)
+CSS sigue una jerarquia especifica. CSS Prioriza #ID  despues las .CLASES y por ultimo los elementos en concreto.
+Se puede editar la jeraquia asignandole al elemento que queremos que sea prioritario: !important;
+  */ 
+
+  /* Colores en CSS. Se pueden representar de 4 formas:
+  1-Nombre de los colores
+  2-RGB (Red-Green-Blue)
+  3-HSL 
+  4-Hexadesimal
+  */
