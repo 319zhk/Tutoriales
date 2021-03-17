@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de HTML</title>
+</head>
+<body>
+    <!--Estas etiquetas son para encabezados-->
+    <h1>Encabezado h1 </h1> 
+    <h2>Encabezado h2 </h2>
+    <h3>Encabezado h3 </h3>
+    <h4>Encabezado h4 </h4>
+    <h5>Encabezado h5 </h5>
+    <h6>Encabezado h6 </h6>
+
+    <!--Esta etiqueta es para parrafos-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perspiciatis recusandae animi vel laborum voluptas minima.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste inventore vero neque maxime deserunt, minima, ea nesciunt architecto iure harum sequi minus molestiae quis recusandae perferendis adipisci, accusamus repellendus saepe.</p>
+
+    <!--Estas etiquetas son para listas DESORDENADAS -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <!--Estas etiquetas son para listas ORDENADAS -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+
+    <!--Esta etiquetas es para enlaces -->
+    <a href="http://google.com">Texto de enlace a otra pagina, tipo Click aqui</a>      <br> <!--br es para dar espacio/otra linea -->
+    <a href="./pagina2.html">Ir a otra de mis paginas, tipo Click aqui</a>
+
+
+    <!--HTML SEMANTICO
+    <article>          Articulo
+    <aside>            Barra lateral
+    <figcaption>       Imagenes y texto de imagenes
+    <figure>           Imagen en si
+    <footer>           Pie de pagina de la pagina web
+    <header>           Encabezado de la pagina
+    <main>             Contenido principal de la web
+    <nav>              Menu de navegacion
+    <section>          Seccion de la pagina
+    <time>             Reloj o tiempo relacionado
+    -->
+
+    <!-- NO SEMANTICO  pero si contenedor
+    <div>              Division que contiene elementos
+    -->
+
+    <!--FORMULARIOS
+        Los formularios permiten solicitar informacion al usuario. Muestran un cuadro donde escribir la informacion.
+    La etiqueta generalmente se ve asi: <form action="./pagina2.html" method="" >   Esta etiqueta tiene 2 atributos: action y method.
+    El atributo action indica hacia donde o en que direccion viajara la informacion ( viaja en bloque)
+    El atributo method indica de que forma viaja la info. Existen 4 tipos de method, get, post, put y delete
+    -->
+    <form action="" method="">
+        <label for="nombre">Introduce tu nombre: </label>  <!--Con la etiqueta label y atributo for permite generar el texto que se guardara-->
+        <input type="text">                                <!--La etiqueta input con atributo type indica que tipo de characters permitira como respuesta-->
+        <label for="edad">Introduce tu edad: </label>
+        <input type="number">
+        <label for="contrasena">Introduce tu contrasena: </label>
+        <input type="password">
+        <label for="email">Introduce tu correo: </label>
+        <input type="email">
+        <!-- Para ofrecer opciones especificas se puede adaptar para mostrar solo estas. El usuario solo podra seleccionar de estas opciones-->
+        <select name="" id="">
+            <option value="seleccion">Select Country</option>
+            <option value="uk">United Kingdom</option>
+            <option value="mx">Mexico</option>
+            <option value="br">Brazil</option>
+            <option value="esp">Espana</option>
+        </select>
+        
+        <!--Para permitir al usuario insertar un mensaje de texto grande. Esta etiqueta tiene varias propiedades como name, ud, cols y rows. Se puede editar el numero de columnas y renglones-->
+        <textarea name="" id="" cols="30" rows="10">
+        </textarea>
+
+    <!--Para permitir al usuario insertar un archivo (attachment) se usa la siquiente etiqueta-->
+    </form>
+    <form enctype="multipart/form-data"  action=""> <!--Se tiene que especificar el atributo enctype para aceptar cierto tipo de archivos. El Multipart/form data es para differentes archivos, tipo word, pdf, jpg etc-->
+
+         <input type="file">
+    </form>
+
+    <!--Para insertar videos en el sitio web se utiliza la sig etiqueta-->
+    <video height="300" width="500" src="./Thai Massage.mp4" controls>
+    </video>
+
+
+</body>
+</html>
