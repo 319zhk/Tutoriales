@@ -1,65 +1,75 @@
 
-/* En CSS existen 3 formas de selectores:
-  Seleccionar por CLASE: (En html <tag class="nombredelaclase"></tag>  en css .nombredelaclase {} ). Ejemplo titulo 1
-  Seleccionar por ID: (En html <tag id="nombredelaID"></tag>  en css #nombredelaID {} ). Ejemplo Texto 1
-  Seleccionar por combinacion: (En css h2.titulos { color: orange,}) 
-  
-  h2 { }
-  h2.clase { }
-  .clase { }
-  #id { }
-  
-  */ 
-
-h1 {
-    text-decoration: underline;
-    border: 1px solid red;
-}
-h2 {
-    color:dodgerblue;
-}
-p {
-    color: dodgerblue;
-}
-h2.titulos {
-    color: purple;
-}
-#textazo {
-    font-size: 88px;
-}
-
-/* En CSS existen tambien pseudo-clases, que afectan a elementos especificos  por ejemplo: first-child, last child, etc 
-  */
-
-section :last-child{
-    color: fuchsia;
-}
+/* En CSS existen diferentes formas de selectores:
+  Seleccion por etiqueta:  h2 { }
+  Seleccionar por CLASE: En html <tag class="nombredeclase"> </tag>  | En css .nombredeclase {}  
+  Seleccionar por ID: En html <tag id="nombredeID"> </tag>  |  En css #nombredeID {}. SOLO SE PUEDE USAR 1 por documento
+  Seleccionar por combinacion: En css etiqueta.nombredeclase {} 
+*/ 
 /* Si se asignan diferentes especificaciones simultaneamente a un mismo elemento CSS (por ejemplo color a un titulo)
 CSS sigue una jerarquia especifica. CSS Prioriza #ID  despues las .CLASES y por ultimo los elementos en concreto.
 Se puede editar la jeraquia asignandole al elemento que queremos que sea prioritario: !important;
-  */ 
+  */
 
-  /* Colores en CSS. 
+h1 {
+    text-decoration: underline;   /* Encabezado H1. Subrayado. Con borde rojo. Regla aplica para todos los encabezados h1. 
+                                    Como no se especifica color de texto, toma por default el negro */
+    border: 1px solid red;}
+p {
+    color: dodgerblue;}   /* Parrafo. Color azul. Regla aplica para todos los parrafos p */
+h2 {
+    color:rgb(236, 104, 16);}  /* Encabezado h2. Naranja. Regla aplica a todos los encabezados h2 */
+h2.titulos {
+    color: purple;}    /* Encabezado h2. Morado. Regla aplica SOLO a los encabezados h2 que tengan la clase "titulos" */
+#textazo {
+    font-size: 50px;}  /* Parrafo con ID textazo. Tomara las caracteristicas asignadas. En este caso solo se asigno el tamaño,
+                      por lo que el color sera el mismo que el asignado para parrafo (azul) */
+
+section :last-child{ 
+    color: rgb(85, 29, 214);} /* En CSS existen tambien pseudo-clases, que afectan a elementos especificos  por ejemplo: first-child, last child, etc 
+    */
+
+ 
+  /* COLORES. 
   Los colores en CSS se pueden representar de 4 formas:
   1-Nombre de los colores. No todos los colores se ven de la misma forma en diferentes pantallas asi que puede variar la tonalidad
   2-RGB (Red-Green-Blue). Se representa el color exacto en la tonalidad seleccionada. Ejemplo  rgb(252, 56, 167). Existe tambien rgba(252, 56, 167, 0.5) El ultimo numero es llamado alfa y va de 0 a 1. Indica la transparencia
   3-HSL  Se representa el color exacto en la tonalidad seleccionada. Ejemplo hsl(326°, 97%, 60%)
   4-Hexadesimal Se representa el color exacto en la tonalidad seleccionada. Ejemplo #fc38a7
-
   (en google si ponemos color picker apareceran otras mas opciones como CMYK(para impresiones) y HSV(para pantallas mas calibradas)
   */
-  .caja {
-      margin: 20px;
+
+
+/* BORDERS */
+
+  .caja-bordes {
+      padding: 10px;
+      margin: 50px;
       height: 200px;
       width: 200px;
     background-color: rgb(255, 231, 74); 
 
-    /* BORDERS */
-    border: 10px dotted red;  /* Esto es un shortcut para tantear el espacio q esta tomando el contenido dentro de nuestra pagina. El border puede ser solid, dotted o dashed    */
+    /*  Los bordes pueden ser  de 3 tipos: solid, dotted o dashed. El atributo width es para el grosor y se asigna en orden de las agujas del relog   */
+    border: 10px dotted red;  
     border-right: dashed green;
-     /* Existe tambien otro atributo de borders que es el grosor (width) y se indica en orden de las agujas del reloj  */
-    border-width: 10px 40px 5px 3px ;  /* Se pueden indicar solo 3 parametros y esto indica valores de arriba, derecha+izq y abajo. Si das 2 parametros indica valores de arriba+abajo y derecha+izq. Y si se da 1 solo parametro es global.    */
-    /* El border radius le da una redondez a la imagen  */
+    border-width: 10px 25px 5px 3px ;  
+    border-radius: 10px; /* El border radius le da una redondez a las esquinas hasta el punto de dejar la imagen redonda  */
     }
-    
-}
+
+/* SOMBRAS */
+.caja-sombras{
+    padding: 10px; 
+    margin: 50px; 
+    height: 200px;
+    width: 200px;
+    background-color: rgb(216, 86, 173);
+    box-shadow: 15px 15px gray; }
+/* Los parametros o medidas que se dan corresponden a: eje X - eje Y - Concentracion - Color de shadow.
+  box-shadow: 15px 15px 20px gray  crearia una sombra difuminada porque el 3er elemento de concentracion tiene un valor asignado */
+/* El sombreado se origina generalmente a la derecha y abajo. Para otro tipo de efecto que cubra toda la base, se puede usar
+ box-shadow: 0 0 30px gray     de esta forma queda mucho mas difuminado por todo debajo
+*/
+
+ h2 {
+     color: greenyellow; }
+
+
