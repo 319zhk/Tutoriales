@@ -61,15 +61,19 @@ section :last-child{
     margin: 50px; 
     height: 200px;
     width: 200px;
-    background-color: rgb(216, 86, 173);
-    box-shadow: 15px 15px gray; }
+    background-color: rgb(114, 194, 214);
+    box-shadow: 15px 15px gray;
+}
 /* Los parametros o medidas que se dan corresponden a: eje X - eje Y - Concentracion - Color de shadow.
   box-shadow: 15px 15px 20px gray  crearia una sombra difuminada porque el 3er elemento de concentracion tiene un valor asignado */
 /* El sombreado se origina generalmente a la derecha y abajo. Para otro tipo de efecto que cubra toda la base, se puede usar
  box-shadow: 0 0 30px gray     de esta forma queda mucho mas difuminado por todo debajo
 */
+ .caja-sombras h2{
+     padding: 10px;
+     color: rgb(248, 252, 251); 
+     text-shadow: 5px 5px 8px black; /*Se puede experimentar con una sombra mas sutil sustituyendo el color por rgba (0, 0, 0, 0.3)
+    }
 
- h2 {
-     color: greenyellow; }
 
 
