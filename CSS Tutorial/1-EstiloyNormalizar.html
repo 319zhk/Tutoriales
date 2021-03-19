@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tutorial CSS</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="./normalize.css">
+</head>
+
+<!--CSS son reglas de estilo para nuestros elementos de html. Existen 3 formas incluir CSS en nuestro HTML.
+  Las primeras 2 formas no son recomendables. Lo mas recomendable es la tercera opcion, es decir, tener un css separado. 
+
+ 1.- Estilos en linea - Se introduce literalmente el style en la etiqueta a editar. Ejemplo<h1 style="border: 1px solid red;">Encabezado</h1>
+ 
+ 2.- Estilo dentro de cabezera (head) - Se especifica dentro del head el estilo para cada elemento. En el contenido entre etiqueta head, se agregara
+ la etiqueta style y se especifica a cuales etiquetas afectara, ejemplo 
+ <head>
+ <style>
+   h1 {
+       text-decoration: underline;
+   }
+  </style>
+</head>
+
+ 3.- Estilo desde otro modulo/archivo. Es necesario crear otro documento dentro de nuestro folder, que se llame estilos.css
+ Tiene que ser .css y en este archivo solo ira directamente la especificacion del estilo. Tenemos que crear una referencia para 
+ que nuestro html conecte con nuestro archivo css. Esto se hace creando dentro del contenido de <head> un 
+   <link rel="stylesheet" href="estilos.css">
+
+  ** NORMALIZAR
+ Cada navegador renderiza el css de manera diferente, por lo tanto hay que normalizarlo para que se vea igual en todos.
+ Para normalizar, existe una libreria que se llama normalize.  Este documento descargado es .css, guadalo en la misma carpeta donde esta tu estilos.css
+ Y agregalo de igual forma con la etiqueta link como hiciste con estilos previamente. !--> 
+
+<body>
+  <main>
+    <section>
+    <h1>Encabezado</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quam alias quidem odit vero est eligendi deserunt iusto! Ipsum consequatur commodi corrupti. Neque voluptatum at eius, dolor dicta necessitatibus placeat!</p>
+    <h2>Titulo 1</h2> 
+ </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tutorial CSS</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="./normalize.css">
+  </head>
+<body>
+
+<!--En CSS existen diferentes formas de selectores:
+  Seleccion por etiqueta: Ejemplo h2 { color: blue; }
+  Seleccionar por CLASE: En html <tag class="nombredeclase"> </tag>  | En css .nombredeclase {}  
+  Seleccionar por ID: En html <tag id="nombredeID"> </tag>  |  En css #nombredeID {}. SOLO SE PUEDE USAR 1 por documento
+  Seleccionar por combinacion: En css etiqueta.nombredeclase {} 
+
+ Si se asignan diferentes especificaciones simultaneamente a un mismo elemento CSS (por ejemplo color a un titulo)
+CSS sigue una jerarquia especifica. CSS Prioriza #ID  despues las .CLASES y por ultimo los elementos en concreto.
+Se puede editar la jeraquia asignandole al elemento que queremos que sea prioritario: !important; !-->
+
+  <section>
+    <h1>Encabezado</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Quasi quam alias quidem odit vero est eligendi deserunt iusto! 
+              Ipsum consequatur commodi corrupti. Neque voluptatum at eius,
+              dolor dicta necessitatibus placeat!</p>
+
+    <h2>Titulo 1</h2> 
+    <h2 class="titulos">Titulo 2</h2> <!-- Selector tipo clase. Todos los elementos que contengan esta clase tendran las mismas caracteristicas asignadas en .css-->
+    <h2>Titulo 3</h2>
+    <p id="textazo">Texto sample con ID</p> <!-- Selector tipo ID. Todos los elementos que contengan esta ID tendran las mismas caracteristicas asignadas en .css-->
+    <p>Texto 2</p>
+    <p>Texto 3</p>
+    <p>Texto 4</p>
+    <p>Texto 5</p>
+ </section>
+</body>
+</html>

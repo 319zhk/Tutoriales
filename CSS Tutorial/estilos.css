@@ -1,15 +1,4 @@
 
-/* En CSS existen diferentes formas de selectores:
-  Seleccion por etiqueta:  h2 { }
-  Seleccionar por CLASE: En html <tag class="nombredeclase"> </tag>  | En css .nombredeclase {}  
-  Seleccionar por ID: En html <tag id="nombredeID"> </tag>  |  En css #nombredeID {}. SOLO SE PUEDE USAR 1 por documento
-  Seleccionar por combinacion: En css etiqueta.nombredeclase {} 
-*/ 
-/* Si se asignan diferentes especificaciones simultaneamente a un mismo elemento CSS (por ejemplo color a un titulo)
-CSS sigue una jerarquia especifica. CSS Prioriza #ID  despues las .CLASES y por ultimo los elementos en concreto.
-Se puede editar la jeraquia asignandole al elemento que queremos que sea prioritario: !important;
-  */
-
 h1 {
     text-decoration: underline;   /* Encabezado H1. Subrayado. Con borde rojo. Regla aplica para todos los encabezados h1. 
                                     Como no se especifica color de texto, toma por default el negro */
@@ -22,22 +11,11 @@ h2.titulos {
     color: purple;}    /* Encabezado h2. Morado. Regla aplica SOLO a los encabezados h2 que tengan la clase "titulos" */
 #textazo {
     font-size: 50px;}  /* Parrafo con ID textazo. Tomara las caracteristicas asignadas. En este caso solo se asigno el tamaño,
-                      por lo que el color sera el mismo que el asignado para parrafo (azul) */
+                        por lo que el color sera el mismo que el asignado para parrafo (azul) */
 
-section :last-child{ 
+section:last-child{ 
     color: rgb(85, 29, 214);} /* En CSS existen tambien pseudo-clases, que afectan a elementos especificos  por ejemplo: first-child, last child, etc 
     */
-
- 
-  /* COLORES. 
-  Los colores en CSS se pueden representar de 4 formas:
-  1-Nombre de los colores. No todos los colores se ven de la misma forma en diferentes pantallas asi que puede variar la tonalidad
-  2-RGB (Red-Green-Blue). Se representa el color exacto en la tonalidad seleccionada. Ejemplo  rgb(252, 56, 167). Existe tambien rgba(252, 56, 167, 0.5) El ultimo numero es llamado alfa y va de 0 a 1. Indica la transparencia
-  3-HSL  Se representa el color exacto en la tonalidad seleccionada. Ejemplo hsl(326°, 97%, 60%)
-  4-Hexadesimal Se representa el color exacto en la tonalidad seleccionada. Ejemplo #fc38a7
-  (en google si ponemos color picker apareceran otras mas opciones como CMYK(para impresiones) y HSV(para pantallas mas calibradas)
-  */
-
 
 /* BORDERS */
 
@@ -48,7 +26,7 @@ section :last-child{
       width: 200px;
     background-color: rgb(255, 231, 74); 
 
-    /*  Los bordes pueden ser  de 3 tipos: solid, dotted o dashed. El atributo width es para el grosor y se asigna en orden de las agujas del relog   */
+    /*  Los bordes pueden ser  de 3 tipos: solid, dotted o dashed. El atributo width es para el grosor y se asigna en orden de las agujas del reloj   */
     border: 10px dotted red;  
     border-right: dashed green;
     border-width: 10px 25px 5px 3px ;  
@@ -72,8 +50,5 @@ section :last-child{
  .caja-sombras h2{
      padding: 10px;
      color: rgb(248, 252, 251); 
-     text-shadow: 5px 5px 8px black; /*Se puede experimentar con una sombra mas sutil sustituyendo el color por rgba (0, 0, 0, 0.3)
+     text-shadow: 5px 5px 8px black; /*Se puede experimentar con una sombra mas sutil sustituyendo el color por rgba (0, 0, 0, 0.3)*/
     }
-
-
-

@@ -1,0 +1,70 @@
+
+************* STYLES / ESTILOS ********************
+CSS son reglas de estilo para nuestros elementos de html. Existen 3 formas incluir CSS en nuestro HTML: 
+ 1.- Estilos en linea - Se introduce literalmente el style en la etiqueta a editar. Ejemplo usado en etiqueta h1.
+ <h1 style="border: 1px solid red;">Encabezado</h1>
+  2.- Estilo dentro de cabezera (head) - Se especifica dentro del head el estilo para cada elemento. En el contenido entre etiqueta head, se agregara
+ la etiqueta style y se especifica a cuales etiquetas afectara, ejemplo 
+ <head>
+ <style>
+   h1 {
+       text-decoration: underline;
+   }
+  </style>
+</head>
+ 3.- Estilo desde otro modulo/archivo. Es necesario crear otro documento dentro de nuestro folder, que se llame estilos.css
+ Tiene que ser .css y en este archivo solo ira directamente la especificacion del estilo. Tenemos que crear una referencia para 
+ que nuestro html conecte con nuestro archivo css. Esto se hace creando dentro del contenido de <head> un 
+   <link rel="stylesheet" href="estilos.css">
+- Las primeras 2 formas no son recomendables. Lo mas recomendable es la tercera opcion, es decir, tener un css separado.
+
+************* NORMALIZAR / NORMALIZER *******************
+ Cada navegador renderiza el css de manera diferente, por lo tanto hay que normalizarlo para que se vea igual en todos.
+ Para normalizar, existe una libreria que se llama normalize.  Este documento descargado es .css, guadalo en la misma carpeta donde esta tu estilos.css
+ Y agregalo de igual forma con la etiqueta link como hiciste con estilos previamente.
+
+
+**************  SELECTORES ************************
+En CSS existen diferentes formas de selectores:
+  Seleccion por etiqueta:  h2 { }
+  Seleccionar por CLASE: En html <tag class="nombredeclase"> </tag>  | En css .nombredeclase {}  
+  Seleccionar por ID: En html <tag id="nombredeID"> </tag>  |  En css #nombredeID {}. SOLO SE PUEDE USAR 1 por documento
+  Seleccionar por combinacion: En css etiqueta.nombredeclase {} 
+
+ En CSS existen tambien pseudo-clases, que afectan a elementos especificos  por ejemplo: first-child, last child, etc 
+
+Si se asignan diferentes especificaciones simultaneamente a un mismo elemento CSS (por ejemplo color a un titulo)
+CSS sigue una jerarquia especifica. CSS Prioriza #ID  despues las .CLASES y por ultimo los elementos en concreto.
+Se puede editar la jeraquia asignandole al elemento que queremos que sea prioritario: !important;
+
+************ COLORES ****************************
+
+  Los colores en CSS se pueden representar de 4 formas:
+  1-Nombre de los colores. No todos los colores se ven de la misma forma en diferentes pantallas asi que puede variar la tonalidad
+  2-RGB (Red-Green-Blue). Se representa el color exacto en la tonalidad seleccionada. Ejemplo  rgb(252, 56, 167). Existe tambien rgba(252, 56, 167, 0.5) El ultimo numero es llamado alfa y va de 0 a 1. Indica la transparencia
+  3-HSL  Se representa el color exacto en la tonalidad seleccionada. Ejemplo hsl(326°, 97%, 60%)
+  4-Hexadesimal Se representa el color exacto en la tonalidad seleccionada. Ejemplo #fc38a7
+  (en google si ponemos color picker apareceran otras mas opciones como CMYK(para impresiones) y HSV(para pantallas mas calibradas)
+  
+
+
+  ************** BORDES  ***********************
+Para el ejercisio de bordes se crea una caja por medio de la etiqueta div.
+    En .css se asigna tamaño y color a esta caja para poder visualizar los diferentes elementos de bordes. 
+    Los bordes pueden ser  de 3 tipos: solid, dotted o dashed. El atributo width es para el grosor y se asigna en orden
+    de las agujas del reloj. El border radius le da una redondez a las esquinas hasta el punto de dejar la imagen redonda  
+
+
+  *********** SOMBRAS DE CAJA Y TEXTO *************
+
+  Para el ejercisio de sombras se crea una caja por medio de la etiqueta div.
+    En .css se asigna tamaño y color a esta caja para poder visualizar los diferentes elementos de sombras
+    En .css se crea la clase caja-sombras y se empiezan a asignar atributos.
+    Para sombra de la caja se usa el atributo box-shadow: 15px 15px 20px gray
+    Los parametros o medidas que se dan corresponden a: eje X - eje Y - Concentracion - Color de shadow.
+  Como el 3er elemento corresponde a la concentracion y tiene un valor asignado de 20, este crearia una sombra difuminada.
+  El sombreado se origina generalmente a la derecha y abajo. Para otro tipo de efecto que cubra toda la base, se puede usar
+  box-shadow: 0 0 30px gray     de esta forma queda mucho mas difuminado por todo debajo 
+  
+  Para el sombreado del texto, se usa en .css la etiqueta text-shados. (Tal vez tengas que usar selector combinado: .clase tag {})
+  text-shadow: 5px 5px 8px black; Se puede experimentar con una sombra mas sutil sustituyendo el color por rgba (0, 0, 0, 0.3) -->

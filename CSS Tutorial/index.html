@@ -9,37 +9,7 @@
     <link rel="stylesheet" href="./normalize.css">
   </head>
 <body>
-  <!--CSS son reglas de estilo para nuestros elementos de html. Existen 3 formas incluir CSS en nuestro HTML: 
-
- 1.- Estilos en linea - Se introduce literalmente el style en la etiqueta a editar. Ejemplo usado en etiqueta h1.
- <h1 style="border: 1px solid red;">Encabezado</h1>
- 
- 2.- Estilo dentro de cabezera (head) - Se especifica dentro del head el estilo para cada elemento. En el contenido entre etiqueta head, se agregara
- la etiqueta style y se especifica a cuales etiquetas afectara, ejemplo 
- <head>
- <style>
-   h1 {
-       text-decoration: underline;
-   }
-  </style>
-</head>
-
- 3.- Estilo desde otro modulo/archivo. Es necesario crear otro documento dentro de nuestro folder, que se llame estilos.css
- Tiene que ser .css y en este archivo solo ira directamente la especificacion del estilo. Tenemos que crear una referencia para 
- que nuestro html conecte con nuestro archivo css. Esto se hace creando dentro del contenido de <head> un 
-   <link rel="stylesheet" href="estilos.css">
-
- Las primeras 2 formas no son recomendables. Lo mas recomendable es la tercera opcion, es decir, tener un css separado.
-
- **Cual es el problema con css? Cada navegador renderiza el css de manera diferente, por lo tanto hay que normalizarlo para que se vea igual en todos.
- Para normalizar, existe una libreria que se llama normalize.  Este documento descargado es .css, guadalo en la misma carpeta donde esta tu estilos.css
- Y agregalo de igual forma con la etiqueta link como hiciste con estilos previamente.
-
- En CSS existen 3 formas de selectores:
-  Seleccionar por CLASE: (En html <tag class="nombredelaclase"></tag>  en css .nombredelaclase {} ). Ejemplo titulo 1
-  Seleccionar por ID: (En html <tag id="nombredelaID"></tag>  en css #nombredelaID {} ). Ejemplo Texto 1
-  Seleccionar por combinacion: (En css tag.clase { color: orange,})
---> 
+  
   <main>
       <section>
           <h1>Encabezado</h1>
@@ -49,7 +19,7 @@
               dolor dicta necessitatibus placeat!</p>
 
           <h2>Titulo 1</h2> 
-          <h2 class="titulos">Titulo 2</h2> <!-- Cuando se especifican las caracteristicas para esta clase en css,todos los elementos que contengan esa clase tendran esas caracteristicas-->
+          <h2 class="titulos">Titulo 2</h2>
           <h2>Titulo 3</h2>
 
           <p id="textazo">Texto sample con ID</p>
@@ -66,6 +36,10 @@
       <div class="caja-sombras">
         <h2>Ejercisio de SOMBRAS </h2>
       </div>
-  </main>   
+  </main>
+  <div class="caja">
+    <p>Texto del parrafo 1</p>
+    <p>Texto del parrafo 2</p>
+  </div>
   </body>
 </html>

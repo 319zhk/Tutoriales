@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tutorial CSS</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="./normalize.css">
+  </head>
+  <body>
+  <!--Para el ejercisio de sombras se crea una caja por medio de la etiqueta div.
+    En .css se asigna tamaño y color a esta caja para poder visualizar los diferentes elementos de sombras. -->
+   <div class="caja-sombras">
+     <h2>Ejercisio de SOMBRAS </h2>
+   </div>
+   <!-- En .css se crea la clase caja-sombras y se empiezan a asignar atributos.
+    Para sombra de la caja se usa el atributo box-shadow: 15px 15px 20px gray
+    Los parametros o medidas que se dan corresponden a: eje X - eje Y - Concentracion - Color de shadow.
+  Como el 3er elemento corresponde a la concentracion y tiene un valor asignado de 20, este crearia una sombra difuminada.
+
+  El sombreado se origina generalmente a la derecha y abajo. Para otro tipo de efecto que cubra toda la base, se puede usar
+  box-shadow: 0 0 30px gray     de esta forma queda mucho mas difuminado por todo debajo  -->
+  </main>
+  <div class="caja">
+    <p>Texto del parrafo 1</p>
+    <p>Texto del parrafo 2</p>
+   <!-- Para el sombreado del texto, se usa en .css la etiqueta text-shados. (Tal vez tengas que usar selector combinado: .clase tag {})
+    text-shadow: 5px 5px 8px black; Se puede experimentar con una sombra mas sutil sustituyendo el color por rgba (0, 0, 0, 0.3) -->
+  </div>
+  </body>
+</html>
