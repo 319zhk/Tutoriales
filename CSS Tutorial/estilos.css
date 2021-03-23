@@ -77,3 +77,45 @@ section:last-child{
     border: 6px solid red;
     padding: 20px;
 }
+
+/* OVERFLOW */
+.contenedor-overflow-1{
+    margin: 40px;
+    height: 150px;
+    width: 150px;
+    background-color: blueviolet;
+}
+.contenedor-overflow-2{
+    margin: 80px;
+    height: 150px;
+    width: 150px;
+    background-color: tomato;
+    overflow:auto;
+}
+
+
+/* POSICIONES */
+.contenedor-posicion{
+height: 80vh;
+width: 80vw;
+border: 5px solid gray;
+margin: auto;
+}
+.cajaposicion{
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem;
+}
+.caja-posi1{
+    background-color: greenyellow;
+}
+.caja-posi2{
+    background-color: rgb(16, 18, 167);
+   /* La posicion por defecto es estatica. Los elementos aparecen en el orden dado en el html.
+    Si se agrega la etiqueta position, se puede seleccionar que sea relativa hacia otros elementos o posiciones. */
+    position: relative;
+    left: 5rem; /* Esto indico que la caja -posi2 se apartara 5 unidades de la izquierda. Tambien se pueden usar valores negativos */
+}
+.caja-posi3{
+    background-color: rgb(233, 10, 65);
+}

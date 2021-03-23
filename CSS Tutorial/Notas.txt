@@ -68,3 +68,59 @@ Para el ejercisio de bordes se crea una caja por medio de la etiqueta div.
   
   Para el sombreado del texto, se usa en .css la etiqueta text-shados. (Tal vez tengas que usar selector combinado: .clase tag {})
   text-shadow: 5px 5px 8px black; Se puede experimentar con una sombra mas sutil sustituyendo el color por rgba (0, 0, 0, 0.3) -->
+
+
+  ************* ESPACIOS: MARGIN, BORDER, PADDING, CONTENT  ********************
+  Existen 4 propiedades referente a espacios:
+
+   - Margin      Espacio entre la pagina total y el sig. elemento que seria un borde. Espacio EXTERNO del contenido 
+                 Entre un elemento y otro los margenes colapsan (solo se toma en cuenta 1)
+                 La mayoria de los navegadores lo incluyen por defecto, dandole 16px por default.
+                 Se indica el espacio en pixeles  4, 3, 2, 1 valores en orden reloj
+   - Border      Es el siguiente elemento despues del margen. Se toma en cuenta como parte del contenido INTERNO.
+                 Se indica el grosor en pixeles. El color. El tipo de borde.
+   - Padding     Corresponde al espacio entre el borde y el contenido en si. Se toma en cuenta como parte del contenido INTERNO.
+                 Se indica el espacio en pixeles. 4, 3, 2, 1 valores en orden reloj
+   - Size        Es el contenido en si. Solo se modifica por height and width.
+
+  Recomendado usa selector universal en css para estandarizar todos los elementos tipo caja para que tengan estas caracteristicas, incluyendo pseudoelementos.
+  En .css al principio:  
+    *, *::after, *::before{
+      box-sizing: border-box;
+    }
+
+
+************** OVERFLOW  **********************
+Todos los elemntos en html tienen propiedades relacionadas con altura y anchura, generalmente definidas en .css.
+Hay ocasiones en las que el elemento hijo sobrepasa las dimensiones del elemento padre. A este efecto se le conoce como OVERFLOW.
+Con la etiqueta overflow se puede contener el elemento hijo dentro del elemento padre, ya sea que se esconda lo que sale de los limites
+o que se permita extender la vista por medio de scroll (mover la barra para ver mas contenido)
+
+
+************ UNIDADES DE MEDIDA ****************
+
+-Absolutas: px   
+
+-Relativas: 
+           vh/vw-  Relativo al Viewport
+           em/rem- Relativo al tamaño de la fuente 
+
+Cuando se usan unidades absolutas, no se modifica (no es responsive) el tamaño del elemento, no se adapta a otros dispositivos mas pequeños-
+
+Cuando se usan unidades relativas ejemplo viewport height (vh) y viewport width (vw), se manejan en porcentajes:
+.elemento{
+  height: 90vh;    <- Cubrira 90% de la pantalla en lo correspondiente a lo alto. Se adaptara a la medida de la ventana (responsive)
+  width: 90vw;     <- Cubrira 90% de la pantalla en lo correspondiente a lo ancho. Se adaptara a la medida de la ventana (responsive)
+}
+
+Para unidades relativas como em y rem (se manejan igual) se manejan tambien en porcentajes y van relacionados con el tamaño de la fuente:
+.elemento{
+  height: 10rem;    <- Cubrira % de la pantalla en lo correspondiente a lo alto. Se adaptara a la medida de la ventana (responsive)
+  width: 10rem;     <- Cubrira % de la pantalla en lo correspondiente a lo ancho. Se adaptara a la medida de la ventana (responsive)
+}
+
+************ POSICIONAMIENTO DE LOS ELEMENTOS  ****************
+Para el ejercisio, se crea una etiqueta div con clase contenedor y dentro de este contenedor se insertan otras 3 divs correspondientes
+a caja uno, dos y tres.
+
+
